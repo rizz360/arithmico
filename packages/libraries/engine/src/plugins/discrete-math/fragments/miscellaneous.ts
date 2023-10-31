@@ -2,10 +2,10 @@ import { FunctionHeaderItem, NumberNode } from '../../../types/nodes.types';
 import createNumberNode from '../../../node-operations/create-node/create-number-node';
 import { fib } from '../utils/fib-utils';
 import { PluginFragment } from '../../../utils/plugin-builder';
-import { calculateFact } from '../utils/fact';
 import { binco } from '../../../utils/math-utils/binco';
 import { getLowestFraction } from '../utils/fraction-utils';
 import createDivided from '../../../node-operations/create-node/create-divided';
+import { calculateFactorial } from '../../../utils/math-utils/factorial-utils';
 
 const bincoHeader: FunctionHeaderItem[] = [
     { name: 'n', type: 'number', evaluate: true },
@@ -54,7 +54,7 @@ __FUNCTIONS.fact &&
             'Berechnet die Fakultät von n.',
             ({ getParameter }) => {
                 const n = (<NumberNode>getParameter('n')).value;
-                return createNumberNode(calculateFact(n));
+                return createNumberNode(calculateFactorial(n));
             },
         )
         .addFunction(

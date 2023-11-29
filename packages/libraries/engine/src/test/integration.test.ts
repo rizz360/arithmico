@@ -64,6 +64,7 @@ integrationTest('1 + 3!', '7');
 integrationTest('3! + 1', '7');
 integrationTest('3! ^2', '36');
 integrationTest('(1 + 2)!', '6');
+integrationTest('((x -> x^2)!)(2)', '24');
 integrationTest('\\sqrt {4}', '2');
 integrationTest('2 * \\sqrt {4}', '4');
 integrationTest('\\sqrt [3] {8}', '2');
